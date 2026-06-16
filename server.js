@@ -1,3 +1,4 @@
+const path = require("path");
 console.log("Starting Server...");
 
 const express = require("express");
@@ -9,6 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
 mongoose.connect(
 "mongodb://likhithavaddhidbuser:Likhitha123@ac-zgn1f7b-shard-00-00.hknz39v.mongodb.net:27017,ac-zgn1f7b-shard-00-01.hknz39v.mongodb.net:27017,ac-zgn1f7b-shard-00-02.hknz39v.mongodb.net:27017/toranamDB?ssl=true&replicaSet=atlas-jswvoc-shard-0&authSource=admin&appName=Cluster0"
@@ -17,7 +19,7 @@ mongoose.connect(
 .catch(err => console.log(err));
 
 app.get("/", (req, res) => {
-    res.send("Toranam Server Running");
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.post("/book-event", async (req, res) => {
