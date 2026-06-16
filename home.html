@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toranam Events</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#8B0000;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+.logo{
+    width:120px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.events{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    color:#8B0000;
+    border-radius:12px;
+    overflow:hidden;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card a{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:10px 20px;
+    background:#8B0000;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+footer{
+    background:#5c0000;
+    padding:30px;
+    text-align:center;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-bottom:15px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+    <h2>Toranam Events</h2>
+
+    <img src="images/logo.png" class="logo" alt="Logo">
+
+</header>
+
+<section class="events">
+
+<div class="event-grid">
+
+    <!-- Birthday -->
+
+    <div class="card">
+        <img src="images/birthday.jpeg" alt="">
+        <h3>Birthday</h3>
+        <a href="event.html?event=Birthday">View Details</a>
+    </div>
+
+    <!-- Baby Shower -->
+
+    <div class="card">
+    <img src="images/baby shower.jpeg" alt="Baby Shower">
+    <h3>Baby Shower</h3>
+    <a href="event.html?event=Baby Shower">View Details</a>
+</div>
+    <!-- Baby Welcome -->
+
+    <div class="card">
+        <img src="images/baby welcome.jpeg" alt="">
+        <h3>Baby Welcome</h3>
+        <a href="event.html?event=Baby Welcome">View Details</a>
+    </div>
+
+    <!-- Bride To Be -->
+
+    <div class="card">
+        <img src="images/bride to be.jpeg" alt="">
+        <h3>Bride To Be</h3>
+        <a href="event.html?event=Bride To Be">View Details</a>
+    </div>
+
+    <!-- Surprise Event -->
+
+    <div class="card">
+        <img src="images/surprise event.jpeg" alt="">
+        <h3>Surprise Event</h3>
+        <a href="event.html?event=Surprise Event">View Details</a>
+    </div>
+
+    <!-- Wedding -->
+
+    <div class="card">
+        <img src="images/wedding.jpeg" alt="">
+        <h3>Wedding</h3>
+        <a href="event.html?event=Wedding">View Details</a>
+    </div>
+
+    <!-- Haldi -->
+
+    <div class="card">
+        <img src="images/haldi.jpeg" alt="">
+        <h3>Haldi</h3>
+        <a href="event.html?event=Haldi">View Details</a>
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    <h2>Reach Out</h2>
+
+    <p>
+        <a href="tel:+916303059600">📞 +91 63030 59600</a> |
+        <a href="https://instagram.com/toranam.decors" target="_blank">
+            📷 toranam.decors
+        </a> |
+        <a href="mailto:decorstoranam@gmail.com">
+            ✉️ decorstoranam@gmail.com
+            <a href="https://wa.me/916303059600"
+            class="whatsapp-btn"
+            target="_blank">
+             Book on WhatsApp
+</a>
+        </a>
+    </p>
+
+    <br>
+
+    <p>© 2026 Toranam Events. All Rights Reserved.</p>
+</footer>

@@ -1,0 +1,17 @@
+footer{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:18px;
+}
+
+footer a:hover{
+    color:#ffd700;
+}
