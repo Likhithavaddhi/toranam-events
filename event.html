@@ -235,18 +235,6 @@ document.getElementById("bookingForm")
 
 document.getElementById("eventTitle").innerText = eventName;
 
-
-
-
-
-if(images[eventName]){
-    images[eventName].forEach(image => {
-        gallery.innerHTML += `
-            <img src="${image}" alt="${eventName}">
-        `;
-    });
-}
-
 async function submitBooking() {
 
     const bookingData = {
