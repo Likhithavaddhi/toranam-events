@@ -98,7 +98,8 @@ async function loadBookings(){
     try{
 
         const response =
-        await fetch("http://localhost:5000/bookings");
+        await fetch("https://toranam-api.onrender.com/book-event", {
+        });
 
         const data =
         await response.json();

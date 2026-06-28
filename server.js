@@ -12,9 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
 
-mongoose.connect(
-"mongodb://likhithavaddhidbuser:Likhitha123@ac-zgn1f7b-shard-00-00.hknz39v.mongodb.net:27017,ac-zgn1f7b-shard-00-01.hknz39v.mongodb.net:27017,ac-zgn1f7b-shard-00-02.hknz39v.mongodb.net:27017/toranamDB?ssl=true&replicaSet=atlas-jswvoc-shard-0&authSource=admin&appName=Cluster0"
-)
+mongoose.connect(process.env.MONGODB_URI)
+
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
@@ -85,6 +84,8 @@ app.delete("/bookings/:id", async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

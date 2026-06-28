@@ -258,7 +258,7 @@ async function submitBooking() {
        console.log("Sending Data:", bookingData);
 
 const response = await fetch(
-    "http://localhost:5000/book-event",
+    "/book-event",
     {
         method: "POST",
         headers: {
