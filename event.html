@@ -168,10 +168,10 @@ const gallery = document.getElementById("gallery");
 const images = {
 
 Birthday:[
-"images/birthday event 1.jpeg",
-"images/birthday event 2.jpeg",
-"images/birthday event 3.jpeg",
-"images/birthday event 4.jpeg"
+"images/irthday event 1.jpeg",
+"images/Birthday event 2.jpeg",
+"images/Birthday event 3.jpeg",
+"images/Birthday event 4.jpeg"
 ],
 
 "Baby Shower":[
@@ -189,10 +189,10 @@ Birthday:[
 ],
 
 "Bride To Be":[
-"images/bride 1.jpeg",
-"images/bride 2.jpeg",
-"images/bride 3.jpeg",
-"images/bride 4.jpeg"
+"images/Bride 1.jpeg",
+"images/Bride 2.jpeg",
+"images/Bride 3.jpeg",
+"images/Bride 4.jpeg"
 ],
 
 "Surprise Event":[
@@ -268,8 +268,12 @@ const response = await fetch(
     }
 );
 
-const data = await response.json();
+if (!response.ok) {
+    const text = await response.text();
+    throw new Error(text);
+}
 
+const data = await response.json();
         if(data.success){
 
             const whatsappMessage =
